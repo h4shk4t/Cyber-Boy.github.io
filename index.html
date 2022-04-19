@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>Portfolio</title>
 </head>
 <body>
     <nav class="navbar">
         <a href="#home">Home</a>
-        <a href="#home">Services</a>
-        <a href="#home">About</a>
-        <a href="#home">Contact Me</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Me</a>
     </nav>
-    <div class="flexbox-container-1">
+    <div class="flexbox-container-1" id="home">
         <div class="flexbox-item flexbox-item-1">
             <div class="mainText">
-                <span class="border">My Portfolio</span>
+                <span class="border">Ashutosh Srivastava</span>
             </div>
         </div>
     </div>
     <section class="content-1">
-        <p class="Text">Some section text here</p>
+        <span class="Text">About</span>
     </section>
-    <div class="flexbox-container-2">
+    <div class="flexbox-container-2" id="about">
         <div class="flexbox-item flexbox-item-2">
-            <span class="Quote">"Cool stuff written here which will somehow enhance my website... I could've written Lorem here but it is too cliche"</span>
+            <span class="Quote">I have been passionate about music ever since I was a kid. I have been an instrumentalist for more than 10 years and have been producing music for more than 7 years. </span>
         </div>
         <div class="flexbox-item flexbox-item-3">
-            <a href="" class="btn">Click Me!</a>
+            <a href="https://www.youtube.com/channel/UCTFW8Ffro6YnunHOv63lEzw" class="btn" target="blank">Click Me!</a>
         </div>
     </div>
     <section class="content-2">
-        <p class="Text">This is section 2</p>
+        <span class="Text">Services</span>
     </section>   
-    <div class="flexbox-container-3">
+    <div class="flexbox-container-3" id="services">
         <div class="flexbox-item flexbox-item-4">
-            <div class="sub-item sub-item-1" href=""><img src="pexels-cristian-benavides-2049411.jpg" class="image" /> Write some random text here... A small paragraph maybe</div>
-            <div class="sub-item sub-item-2" href=""><img src="2.jpg" class="image" />Write some random text here... A small paragraph maybe</div>
-            <div class="sub-item sub-item-3" href=""><img src="3.jpg" class="image" />Write some random text here... A small paragraph maybe</div>
-            <div class="sub-item sub-item-4" href=""><img src="4.jpg" class="image" />Write some random text here... A small paragraph maybe</div>
+            <div class="sub-item sub-item-1" href="">
+                <span class="boxText">Music Production</span>
+            </div>
+            <div class="sub-item sub-item-2" href="">
+                <span class="boxText">Bass</span>
+            </div>
+            <div class="sub-item sub-item-3" href="">
+                <span class="boxText">Audio Mixing</span>
+            </div>
+            <div class="sub-item sub-item-4" href="">
+                <span class="boxText">Guitar</span>
+            </div>
         </div>
     </div>
-    <footer class="footer">
-        <p class="Text">A lot of text here. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, aspernatur laborum nam sit in dolores, at repellat numquam odio, debitis sapiente inventore ipsum nulla amet ab. Consequuntur distinctio esse aspernatur!</p>
+    <footer class="footer" id="contact">
+        <a href="mailto:ashutosh@gmail.com" class="Text">Contact Me</p>
     </footer>
 </body>
 </html>
