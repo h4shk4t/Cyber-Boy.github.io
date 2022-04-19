@@ -1,30 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital@1&family=Raleway:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
 
 html{
     scrollbar-color: #323232 #000;
     scrollbar-width: 2px;
+    scroll-behavior: smooth;
+    font-size: 10px;
 }
 
 .flexbox-container-1,.flexbox-container-2,.flexbox-container-3{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+}   
 
 .flexbox-item{
     width: 50%;
-    margin: 0px;
+    margin: 0;
     /*border: 3px solid rgb(70, 68, 68);*/
     background-color: rgb(207, 172, 172);
     text-align: center;
-    font-size: 50px;
+    font-size: 5rem;
     overflow: hidden;
 }
 
 .content-1,.content-2, .footer{
-    height: 150px;
+    height: 20vh;
     text-align: center;
-    padding: 50px 60px;
+    /*padding: 50px 60px; Trying to avoid using px*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #000;
 }
 
@@ -38,35 +49,41 @@ html{
 }
 
 .flexbox-item-1 {
-    min-height: 1000px;
-    background-image: url("Guitar1.jpg");
+    min-height: 100vh;
+    background-image: url("assets/Guitar1.jpg");
     width:100%;
 }
 
 .flexbox-item-2 {
-    min-height: 900px;
+    min-height: 90vh;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flexbox-item-3 {
-    min-height: 900px;
-    background-image: url("Guitar2.jpg");
+    min-height: 90vh;
+    background-image: url("assets/Guitar2.jpg");
 }
 
 .flexbox-item-3:hover{
-    animation: overlap 1s ease-in-out;
+    animation: overlap 1s ease-in-out infinite;
+    animation-fill-mode: forwards;
 }
 
 .flexbox-item-4{
-    min-height: 700px;
-    width:540px;
+    min-height: 65vh;
+    /*what to do about width?*/
+    width:580px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: row;
     background-color: #ffffff;
-    padding: 40px;
-    margin: 0;
+    position: relative;
+    align-items: center;
+
 }
 
 .navbar{
@@ -76,7 +93,7 @@ html{
     padding: 0px;
     background-color: #000000;
     overflow: hidden;
-    height: 25px;
+    height: 2.5vh;
     padding: 20px;
     width: 100%;
     /*what does z index mean?*/
@@ -87,7 +104,7 @@ html{
     color: #ffffff;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 2rem;
     padding: 14px 16px;
     margin:0px;
     transition: 500ms;
@@ -104,13 +121,18 @@ body{
 
 .Text{
     position: relative;
-    top:10%;
     width: 100%;
     text-align: center;
     color: rgb(255, 255, 255);
-    font-size: 27px;
+    font-size: 2.7rem;
     letter-spacing: 5px;
     text-transform: uppercase;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.Text:hover{
+    color:rgb(205, 205, 205);
 }
 
 .mainText{
@@ -119,7 +141,7 @@ body{
     width: 100%;
     text-align: center;
     color: rgb(255, 255, 255);
-    font-size: 27px;
+    font-size: 2.7rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     opacity: 100%;
@@ -134,13 +156,14 @@ body{
 
 .sub-item{
     text-align: center;
-    font-size: 50px;
+    font-size: 5rem;
     text-align: center;
     height:250px;
     width:250px;
     margin-bottom:5px;
     border-radius: 10px;
     padding: 10px;
+    background-image: url();
 }
 
 .sub-item:hover{
@@ -148,11 +171,34 @@ body{
     animation-fill-mode: forwards;
 }
 
+.sub-item:hover .boxText{
+    opacity: 100%;
+}
+
+.sub-item-1{
+    background-image: url("assets/pexels-cristian-benavides-2049411.jpg");
+}
+
+.sub-item-2{
+    background-image: url("assets/2.jpg");
+}
+
+.sub-item-3{
+    background-image: url("assets/3.jpg");
+}
+
+.sub-item-4{
+    background-image: url("assets/4.jpg");
+}
+
 .sub-item-1, .sub-item-2, .sub-item-3, .sub-item-4{
     position: relative;
-    float: left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     overflow: hidden;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .image{
@@ -174,26 +220,36 @@ body{
     }
 }
 
-@keyframes overlap {
+/*This is not working @keyframes overlap {
     0%{
         width:50%;
     }
     100%{
         width:100%;
     }
+} */
+.boxText{
+    color: #ffffff;
+    z-index: 10;
+    font-family: 'Kanit', sans-serif;
+    opacity: 0%;
+    transition: 300ms ease-in-out;
 }
 
 .Quote{
     position: relative;
     color: #000000;
-    top: 30%;
-    font-family: 'Bebas Neue', cursive;
-    padding: 100px;
+    font-family: 'Source Code Pro', monospace;
+    font-size:4rem;
+    padding: 20px;
 }
 
 .footer{
-    height:300px;
+    height:30vh;
     background-color: #323232;
+    padding: 0px;
+    margin: 0px;
+    opacity: 90%;
 }
 
 .btn {
@@ -202,7 +258,7 @@ body{
     position: relative;
     top:40%;
     right: 0%;
-    font-size: 30px;
+    font-size: 3rem;
     padding: 20px;
     margin: 30px;
     border: 2px solid #ffffff;
